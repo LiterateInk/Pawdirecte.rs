@@ -1,6 +1,12 @@
 [package]
 name = "pawdirecte"
 version = "0.1.0"
+authors = ["LiterateInk <contact@literate.ink>"]
+documentation = "https://crowous.docs.literate.ink/"
+repository = "https://github.com/LiterateInk/Pawdirecte.rs"
+description = "A purrfect API wrapper for EcoleDirecte."
+keywords = ["ecoledirecte", "wrapper", "api"]
+license = "GPL-3.0-or-later"
 edition = "2024"
 
 [dependencies]
