@@ -1,0 +1,972 @@
+{
+  "code": 200,
+  "token": "b2869cb5-5231-4ae9-9eda-ba1c8d5cd483",
+  "message": "",
+  "data": {
+    "changementMDP": false,
+    "nbJourMdpExire": 0,
+    "accounts": [
+      {
+        "idLogin": 5203478,
+        "id": 4472,
+        "uid": "22f33c079c284a7c95f1e9b214f0f9a1",
+        "identifiant": "EDFAMILLE",
+        "typeCompte": "1",
+        "codeOgec": "073TEST2",
+        "main": true,
+        "lastConnexion": "2024-08-26 15:09",
+        "civilite": "M.",
+        "prenom": "Gérard",
+        "particule": "",
+        "nom": "MENFIN",
+        "email": "contact@aplim.fr",
+        "isPrimaire": false,
+        "nomEtablissement": "Ensemble Scolaire APLIM",
+        "logoEtablissement": "\\\\FTP01\\import\\073TEST3\\images (1).png",
+        "couleurAgendaEtablissement": "#00bfff",
+        "dicoEnLigneLeRobert": false,
+        "socketToken": "REDACTED",
+        "modules": [
+          {
+            "code": "ACTUALITES",
+            "enable": false,
+            "ordre": 0,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "CLOUD",
+            "enable": true,
+            "ordre": 80,
+            "badge": 0,
+            "params": {
+              "nbBadgePostits": "0",
+              "isActifPostitsEspacesTravail": "1",
+              "nbBadgeAgendaEvenements": "0",
+              "isActifAgendaEvenementsEspacesTravail": "0",
+              "visiosActif": "1",
+              "collaboraActif": "1",
+              "collaboraEdit": "1",
+              "collaboraFormat": "openXML",
+              "collaboraFormatChoixLibre": "0",
+              "streamingActif": "1"
+            }
+          },
+          {
+            "code": "COORDONNEES",
+            "enable": true,
+            "ordre": 10,
+            "badge": 0,
+            "params": {
+              "authentificationSms": "0"
+            }
+          },
+          {
+            "code": "COMPTE",
+            "enable": true,
+            "ordre": 0,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "SITUATION_FINANCIERE",
+            "enable": true,
+            "ordre": 20,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "FACTURES",
+            "enable": true,
+            "ordre": 0,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "MODE_DE_REGLEMENT",
+            "enable": true,
+            "ordre": 0,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "PAIEMENT_EN_LIGNE",
+            "enable": true,
+            "ordre": 30,
+            "badge": 0,
+            "params": {
+              "montantMinimum": "5",
+              "codeDevise": "978",
+              "libelleSoldeDebiteur": "Règlement du solde de votre compte",
+              "libelleSoldeCrediteur": "Versement sur votre compte",
+              "devise": "€"
+            }
+          },
+          {
+            "code": "MESSAGERIE",
+            "enable": true,
+            "ordre": 40,
+            "badge": 3,
+            "params": {
+              "isActif": "1",
+              "canParentsLireMessagesEnfants": "1",
+              "destAdmin": "1",
+              "destEleve": "0",
+              "destFamille": "0",
+              "destProf": "1",
+              "destEspTravail": "1",
+              "disabledNotification": "0",
+              "notificationEmailEtablissement": "1",
+              "choixMailNotification": "0",
+              "autreMailNotification": "",
+              "mailPro": "",
+              "mailPerso": "menfin@aplim.fr",
+              "messagerieApiVersion": "v3",
+              "blackListProfActive": "0",
+              "estEnBlackList": "0",
+              "afficherToutesLesClasses": "0"
+            }
+          },
+          {
+            "code": "DOCUMENTS",
+            "enable": true,
+            "ordre": 50,
+            "badge": 0,
+            "params": {
+              "DocumentsNotesActif": "1",
+              "DocumentsVSActif": "1",
+              "DocumentsFactureActif": "1",
+              "DocumentsAdministratifActif": "1",
+              "DocumentsInsReinsActif": "1",
+              "DocumentsEntrepriseActif": "1",
+              "AnneeArchive": "2019-2020,2020-2021,2021-2022,2022-2023,2023-2024"
+            }
+          },
+          {
+            "code": "EDFORMS",
+            "enable": true,
+            "ordre": 60,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "CATER",
+            "enable": false,
+            "ordre": 90,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ARD",
+            "enable": false,
+            "ordre": 120,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "SCOLACONCEPT",
+            "enable": false,
+            "ordre": 100,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ALISE",
+            "enable": false,
+            "ordre": 110,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ESIDOC",
+            "enable": false,
+            "ordre": 120,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "DOSSIER_INSCRIPTION",
+            "enable": true,
+            "ordre": 85,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "CLICKNPLAY",
+            "enable": false,
+            "ordre": 171,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ONISEPSERVICES",
+            "enable": false,
+            "ordre": 172,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "MSC",
+            "enable": false,
+            "ordre": 173,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ETUDIANT",
+            "enable": false,
+            "ordre": 174,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "FUTURNESS",
+            "enable": false,
+            "ordre": 175,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "ALPHAEDUCATION",
+            "enable": false,
+            "ordre": 176,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "EDIALOG",
+            "enable": false,
+            "ordre": 177,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "HUB",
+            "enable": true,
+            "ordre": 180,
+            "badge": 0,
+            "params": {}
+          }
+        ],
+        "parametresIndividuels": {
+          "lsuPoilDansLaMainBorne1": "",
+          "lsuPoilDansLaMainBorne2": "",
+          "lsuPoilDansLaMainBorne3": "",
+          "modeCalculLSU": "",
+          "isQrcode": true,
+          "accessibiliteVisuelle": false,
+          "zoomPage": false,
+          "checkAuthentificationSecure": false,
+          "typeSaisieNotesDefaut": "",
+          "nbJoursMaxRenduDevoirCDT": "",
+          "typeViewCDTDefaut": "",
+          "blocPMAccueil": false,
+          "blocActuAccueil": false
+        },
+        "profile": {
+          "email": "menfin@aplim.fr",
+          "telPortable": "07 88 67 73 37",
+          "telPortableConjoint": "",
+          "eleves": [
+            {
+              "id": 4193,
+              "prenom": "Nathan",
+              "nom": "AFEU",
+              "sexe": "M",
+              "infoEDT": "",
+              "photo": "//doc1.ecoledirecte.com/PhotoEleves/073TEST2_714d424d764c7533325151/776e36433177.jpg",
+              "nomEtablissement": "Ensemble Scolaire APLIM",
+              "idEtablissement": "0",
+              "idReelEtab": "3",
+              "isPrimaire": false,
+              "modules": [
+                {
+                  "code": "CANTINE_BARCODE",
+                  "enable": true,
+                  "ordre": 1,
+                  "badge": 0,
+                  "params": {
+                    "numeroBadge": "eleve||4193||240003"
+                  }
+                },
+                {
+                  "code": "VIE_SCOLAIRE",
+                  "enable": true,
+                  "ordre": 10,
+                  "badge": 1,
+                  "params": {
+                    "autorisationsSortieActif": "0",
+                    "saisieDemandesFamillesActif": "1",
+                    "saisieDispenseDemandesFamillesActif": "1"
+                  }
+                },
+                {
+                  "code": "VIE_DE_LA_CLASSE",
+                  "enable": true,
+                  "ordre": 20,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "JOURNAL_DE_CLASSE",
+                  "enable": false,
+                  "ordre": 22,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "NOTES",
+                  "enable": true,
+                  "ordre": 30,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "CLOUD",
+                  "enable": true,
+                  "ordre": 90,
+                  "badge": 0,
+                  "params": {
+                    "nbBadgePostits": "0",
+                    "isActifPostitsEspacesTravail": "1",
+                    "nbBadgeAgendaEvenements": "0",
+                    "isActifAgendaEvenementsEspacesTravail": "0",
+                    "padsActif": "0",
+                    "visiosActif": "1",
+                    "collaboraActif": "1",
+                    "collaboraEdit": "1",
+                    "collaboraFormat": "openXML",
+                    "collaboraFormatChoixLibre": "0",
+                    "streamingActif": "1"
+                  }
+                },
+                {
+                  "code": "MESSAGERIE",
+                  "enable": true,
+                  "ordre": 40,
+                  "badge": 0,
+                  "params": {
+                    "isActif": "1",
+                    "canParentsLireMessagesEnfants": "1",
+                    "destAdmin": "1",
+                    "destEleve": "0",
+                    "destFamille": "0",
+                    "destProf": "1",
+                    "destEspTravail": "1",
+                    "disabledNotification": "0",
+                    "notificationEmailEtablissement": "1",
+                    "choixMailNotification": "0",
+                    "autreMailNotification": "",
+                    "mailPro": "",
+                    "mailPerso": "",
+                    "messagerieApiVersion": "v3",
+                    "blackListProfActive": "0",
+                    "estEnBlackList": "0",
+                    "afficherToutesLesClasses": "0"
+                  }
+                },
+                {
+                  "code": "EDT",
+                  "enable": true,
+                  "ordre": 50,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "DOCUMENTS_ELEVE",
+                  "enable": true,
+                  "ordre": 77,
+                  "badge": 0,
+                  "params": {
+                    "DocumentsNotesActif": "1",
+                    "DocumentsVSActif": "1",
+                    "DocumentsAdministratifActif": "1",
+                    "DocumentsEntrepriseActif": "1",
+                    "AnneeArchive": "2019-2020,2020-2021,2021-2022,2022-2023,2023-2024"
+                  }
+                },
+                {
+                  "code": "CAHIER_DE_TEXTES",
+                  "enable": true,
+                  "ordre": 60,
+                  "badge": 0,
+                  "params": {
+                    "compteRenduSeance": "1",
+                    "compteRenduSeancePrevisionnel": "1",
+                    "isCDTPrimaire": "0"
+                  }
+                },
+                {
+                  "code": "MANUELS_SCOLAIRES",
+                  "enable": true,
+                  "ordre": 62,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "EDFORMS",
+                  "enable": true,
+                  "ordre": 70,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "COMMANDE_PASSAGE",
+                  "enable": true,
+                  "ordre": 81,
+                  "badge": 0,
+                  "params": {
+                    "affichageMenuSeul": "0"
+                  }
+                },
+                {
+                  "code": "CARNET_CORRESPONDANCE",
+                  "enable": true,
+                  "ordre": 70,
+                  "badge": 0,
+                  "params": {
+                    "peutEcrire": "1",
+                    "typesCorrespondance": "Demande de rendez-vous¤Correspondance avec les enseignants",
+                    "destPP": "1",
+                    "destP": "1",
+                    "destA": "2"
+                  }
+                },
+                {
+                  "code": "SUIVI_STAGE",
+                  "enable": true,
+                  "ordre": 75,
+                  "badge": 0,
+                  "params": {
+                    "afficherCompteRenduVisite": "1"
+                  }
+                },
+                {
+                  "code": "LIVRET_APPRENTISSAGE",
+                  "enable": false,
+                  "ordre": 76,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "RESERVATIONS",
+                  "enable": true,
+                  "ordre": 80,
+                  "badge": 0,
+                  "params": {
+                    "regime": "Demi-Pensionnaire",
+                    "repasmidi_1": "0",
+                    "repassoir_1": "0",
+                    "repasmidi_2": "0",
+                    "repassoir_2": "0",
+                    "repasmidi_3": "0",
+                    "repassoir_3": "0",
+                    "repasmidi_4": "0",
+                    "repassoir_4": "0",
+                    "repasmidi_5": "0",
+                    "repassoir_5": "0",
+                    "repasmidi_6": "0",
+                    "repassoir_6": "0",
+                    "repasmidi_7": "0",
+                    "repassoir_7": "0"
+                  }
+                },
+                {
+                  "code": "REUNIONS_PP",
+                  "enable": false,
+                  "ordre": 85,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "RDVPP",
+                  "enable": false,
+                  "ordre": 90,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "HUB",
+                  "enable": true,
+                  "ordre": 95,
+                  "badge": 0,
+                  "params": {}
+                }
+              ],
+              "classe": {
+                "id": 102,
+                "code": "1A",
+                "libelle": "Première A",
+                "estNote": 1
+              }
+            },
+            {
+              "id": 4179,
+              "prenom": "Pierre",
+              "nom": "AFEU",
+              "sexe": "M",
+              "infoEDT": "",
+              "photo": "//doc1.ecoledirecte.com/PhotoEleves/073TEST2_714d424d764c7533325151/65766a305651.jpg",
+              "nomEtablissement": "Ensemble Scolaire APLIM",
+              "idEtablissement": "0",
+              "idReelEtab": "2",
+              "isPrimaire": false,
+              "modules": [
+                {
+                  "code": "CANTINE_BARCODE",
+                  "enable": true,
+                  "ordre": 1,
+                  "badge": 0,
+                  "params": {
+                    "numeroBadge": "eleve||4179||237629"
+                  }
+                },
+                {
+                  "code": "VIE_SCOLAIRE",
+                  "enable": true,
+                  "ordre": 10,
+                  "badge": 8,
+                  "params": {
+                    "autorisationsSortieActif": "1",
+                    "saisieDemandesFamillesActif": "1",
+                    "saisieDispenseDemandesFamillesActif": "1"
+                  }
+                },
+                {
+                  "code": "VIE_DE_LA_CLASSE",
+                  "enable": true,
+                  "ordre": 20,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "JOURNAL_DE_CLASSE",
+                  "enable": false,
+                  "ordre": 22,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "NOTES",
+                  "enable": true,
+                  "ordre": 30,
+                  "badge": 42,
+                  "params": {}
+                },
+                {
+                  "code": "CLOUD",
+                  "enable": true,
+                  "ordre": 90,
+                  "badge": 0,
+                  "params": {
+                    "nbBadgePostits": "0",
+                    "isActifPostitsEspacesTravail": "1",
+                    "nbBadgeAgendaEvenements": "0",
+                    "isActifAgendaEvenementsEspacesTravail": "0",
+                    "padsActif": "0",
+                    "visiosActif": "1",
+                    "collaboraActif": "1",
+                    "collaboraEdit": "1",
+                    "collaboraFormat": "openXML",
+                    "collaboraFormatChoixLibre": "0",
+                    "streamingActif": "1"
+                  }
+                },
+                {
+                  "code": "MESSAGERIE",
+                  "enable": true,
+                  "ordre": 40,
+                  "badge": 1,
+                  "params": {
+                    "isActif": "1",
+                    "canParentsLireMessagesEnfants": "1",
+                    "destAdmin": "1",
+                    "destEleve": "0",
+                    "destFamille": "0",
+                    "destProf": "1",
+                    "destEspTravail": "1",
+                    "disabledNotification": "0",
+                    "notificationEmailEtablissement": "1",
+                    "choixMailNotification": "0",
+                    "autreMailNotification": "",
+                    "mailPro": "",
+                    "mailPerso": "harry.potter@aplim.fr",
+                    "messagerieApiVersion": "v3",
+                    "blackListProfActive": "0",
+                    "estEnBlackList": "0",
+                    "afficherToutesLesClasses": "0"
+                  }
+                },
+                {
+                  "code": "EDT",
+                  "enable": true,
+                  "ordre": 50,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "DOCUMENTS_ELEVE",
+                  "enable": true,
+                  "ordre": 77,
+                  "badge": 0,
+                  "params": {
+                    "DocumentsNotesActif": "1",
+                    "DocumentsVSActif": "1",
+                    "DocumentsAdministratifActif": "1",
+                    "DocumentsEntrepriseActif": "1",
+                    "AnneeArchive": "2019-2020,2020-2021,2021-2022,2022-2023,2023-2024"
+                  }
+                },
+                {
+                  "code": "CAHIER_DE_TEXTES",
+                  "enable": true,
+                  "ordre": 60,
+                  "badge": 0,
+                  "params": {
+                    "compteRenduSeance": "1",
+                    "compteRenduSeancePrevisionnel": "1",
+                    "isCDTPrimaire": "0"
+                  }
+                },
+                {
+                  "code": "MANUELS_SCOLAIRES",
+                  "enable": true,
+                  "ordre": 62,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "EDFORMS",
+                  "enable": true,
+                  "ordre": 70,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "COMMANDE_PASSAGE",
+                  "enable": true,
+                  "ordre": 81,
+                  "badge": 0,
+                  "params": {
+                    "affichageMenuSeul": "0"
+                  }
+                },
+                {
+                  "code": "CARNET_CORRESPONDANCE",
+                  "enable": true,
+                  "ordre": 70,
+                  "badge": 2,
+                  "params": {
+                    "peutEcrire": "1",
+                    "typesCorrespondance": "Demande de rendez-vous¤Correspondance avec les enseignants",
+                    "destPP": "1",
+                    "destP": "1",
+                    "destA": "2"
+                  }
+                },
+                {
+                  "code": "SUIVI_STAGE",
+                  "enable": true,
+                  "ordre": 75,
+                  "badge": 0,
+                  "params": {
+                    "afficherCompteRenduVisite": "1"
+                  }
+                },
+                {
+                  "code": "LIVRET_APPRENTISSAGE",
+                  "enable": false,
+                  "ordre": 76,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "RESERVATIONS",
+                  "enable": true,
+                  "ordre": 80,
+                  "badge": 0,
+                  "params": {
+                    "regime": "Demi-Pensionnaire",
+                    "repasmidi_1": "1",
+                    "repassoir_1": "0",
+                    "repasmidi_2": "1",
+                    "repassoir_2": "0",
+                    "repasmidi_3": "0",
+                    "repassoir_3": "0",
+                    "repasmidi_4": "1",
+                    "repassoir_4": "0",
+                    "repasmidi_5": "1",
+                    "repassoir_5": "0",
+                    "repasmidi_6": "0",
+                    "repassoir_6": "0",
+                    "repasmidi_7": "0",
+                    "repassoir_7": "0"
+                  }
+                },
+                {
+                  "code": "REUNIONS_PP",
+                  "enable": true,
+                  "ordre": 85,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "RDVPP",
+                  "enable": false,
+                  "ordre": 90,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "HUB",
+                  "enable": true,
+                  "ordre": 95,
+                  "badge": 0,
+                  "params": {}
+                }
+              ],
+              "classe": {
+                "id": 14,
+                "code": "3A",
+                "libelle": "3ème A",
+                "estNote": 1
+              }
+            },
+            {
+              "id": 4191,
+              "prenom": "Tiphaine",
+              "nom": "AFEU",
+              "sexe": "F",
+              "infoEDT": "",
+              "photo": "//doc1.ecoledirecte.com/PhotoEleves/073TEST2_714d424d764c7533325151/56764c775351.jpg",
+              "nomEtablissement": "Ensemble Scolaire APLIM",
+              "idEtablissement": "0",
+              "idReelEtab": "5",
+              "isPrimaire": true,
+              "modules": [
+                {
+                  "code": "CANTINE_BARCODE",
+                  "enable": true,
+                  "ordre": 1,
+                  "badge": 0,
+                  "params": {
+                    "numeroBadge": "eleve||4191||240001"
+                  }
+                },
+                {
+                  "code": "VIE_SCOLAIRE",
+                  "enable": true,
+                  "ordre": 10,
+                  "badge": 2,
+                  "params": {
+                    "autorisationsSortieActif": "0",
+                    "saisieDemandesFamillesActif": "1",
+                    "saisieDispenseDemandesFamillesActif": "1"
+                  }
+                },
+                {
+                  "code": "VIE_DE_LA_CLASSE",
+                  "enable": true,
+                  "ordre": 20,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "JOURNAL_DE_CLASSE",
+                  "enable": true,
+                  "ordre": 22,
+                  "badge": 210,
+                  "params": {}
+                },
+                {
+                  "code": "NOTES",
+                  "enable": true,
+                  "ordre": 30,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "CLOUD",
+                  "enable": true,
+                  "ordre": 90,
+                  "badge": 0,
+                  "params": {
+                    "nbBadgePostits": "0",
+                    "isActifPostitsEspacesTravail": "1",
+                    "nbBadgeAgendaEvenements": "0",
+                    "isActifAgendaEvenementsEspacesTravail": "0",
+                    "padsActif": "0",
+                    "visiosActif": "1",
+                    "collaboraActif": "1",
+                    "collaboraEdit": "1",
+                    "collaboraFormat": "openXML",
+                    "collaboraFormatChoixLibre": "0",
+                    "streamingActif": "1"
+                  }
+                },
+                {
+                  "code": "MESSAGERIE",
+                  "enable": true,
+                  "ordre": 40,
+                  "badge": 0,
+                  "params": {
+                    "isActif": "1",
+                    "canParentsLireMessagesEnfants": "1",
+                    "destAdmin": "1",
+                    "destEleve": "0",
+                    "destFamille": "0",
+                    "destProf": "1",
+                    "destEspTravail": "1",
+                    "disabledNotification": "0",
+                    "notificationEmailEtablissement": "1",
+                    "choixMailNotification": "0",
+                    "autreMailNotification": "",
+                    "mailPro": "",
+                    "mailPerso": "",
+                    "messagerieApiVersion": "v3",
+                    "blackListProfActive": "0",
+                    "estEnBlackList": "0",
+                    "afficherToutesLesClasses": "0"
+                  }
+                },
+                {
+                  "code": "EDT",
+                  "enable": true,
+                  "ordre": 50,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "DOCUMENTS_ELEVE",
+                  "enable": true,
+                  "ordre": 77,
+                  "badge": 0,
+                  "params": {
+                    "DocumentsNotesActif": "1",
+                    "DocumentsVSActif": "1",
+                    "DocumentsAdministratifActif": "1",
+                    "DocumentsEntrepriseActif": "1",
+                    "AnneeArchive": "2019-2020,2020-2021,2021-2022,2022-2023,2023-2024"
+                  }
+                },
+                {
+                  "code": "CAHIER_DE_TEXTES",
+                  "enable": true,
+                  "ordre": 60,
+                  "badge": 0,
+                  "params": {
+                    "compteRenduSeance": "1",
+                    "compteRenduSeancePrevisionnel": "1",
+                    "isCDTPrimaire": "1"
+                  }
+                },
+                {
+                  "code": "MANUELS_SCOLAIRES",
+                  "enable": true,
+                  "ordre": 62,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "EDFORMS",
+                  "enable": true,
+                  "ordre": 70,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "COMMANDE_PASSAGE",
+                  "enable": true,
+                  "ordre": 81,
+                  "badge": 0,
+                  "params": {
+                    "affichageMenuSeul": "0"
+                  }
+                },
+                {
+                  "code": "CARNET_CORRESPONDANCE",
+                  "enable": true,
+                  "ordre": 70,
+                  "badge": 2,
+                  "params": {
+                    "peutEcrire": "1",
+                    "typesCorrespondance": "Demande de rendez-vous\n¤Correspondance avec l'instituteur",
+                    "destPP": "1",
+                    "destP": "1",
+                    "destA": "2"
+                  }
+                },
+                {
+                  "code": "SUIVI_STAGE",
+                  "enable": true,
+                  "ordre": 75,
+                  "badge": 0,
+                  "params": {
+                    "afficherCompteRenduVisite": "1"
+                  }
+                },
+                {
+                  "code": "LIVRET_APPRENTISSAGE",
+                  "enable": false,
+                  "ordre": 76,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "RESERVATIONS",
+                  "enable": true,
+                  "ordre": 80,
+                  "badge": 0,
+                  "params": {
+                    "regime": "Demi-Pensionnaire",
+                    "repasmidi_1": "1",
+                    "repassoir_1": "0",
+                    "repasmidi_2": "0",
+                    "repassoir_2": "0",
+                    "repasmidi_3": "0",
+                    "repassoir_3": "0",
+                    "repasmidi_4": "0",
+                    "repassoir_4": "0",
+                    "repasmidi_5": "1",
+                    "repassoir_5": "0",
+                    "repasmidi_6": "0",
+                    "repassoir_6": "0",
+                    "repasmidi_7": "0",
+                    "repassoir_7": "0"
+                  }
+                },
+                {
+                  "code": "REUNIONS_PP",
+                  "enable": false,
+                  "ordre": 85,
+                  "badge": 0,
+                  "params": {}
+                },
+                {
+                  "code": "RDVPP",
+                  "enable": true,
+                  "ordre": 90,
+                  "badge": 1,
+                  "params": {}
+                },
+                {
+                  "code": "HUB",
+                  "enable": true,
+                  "ordre": 95,
+                  "badge": 0,
+                  "params": {}
+                }
+              ],
+              "classe": {
+                "id": 38,
+                "code": "CE2-CM1",
+                "libelle": "Cours Elémentaire 2e année & Cours Moyens 1ère année",
+                "estNote": 0
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

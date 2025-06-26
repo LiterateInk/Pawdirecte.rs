@@ -1,0 +1,283 @@
+{
+  "code": 200,
+  "token": "fee113ef-3fcd-4921-8ca5-1ba8a2a3d1fa",
+  "message": "",
+  "data": {
+    "changementMDP": false,
+    "nbJourMdpExire": 0,
+    "accounts": [
+      {
+        "idLogin": 7967817,
+        "id": 4191,
+        "uid": "94b47fc4c0e1483997114fa95f0cd902",
+        "identifiant": "EDELEVEP",
+        "typeCompte": "E",
+        "codeOgec": "073TEST2",
+        "main": true,
+        "lastConnexion": "2025-06-20 00:00",
+        "civilite": "",
+        "prenom": "Tiphaine",
+        "particule": "",
+        "nom": "AFEU",
+        "email": "emilie.charle@aplim.fr",
+        "isPrimaire": true,
+        "nomEtablissement": "Ensemble Scolaire APLIM",
+        "logoEtablissement": "\\\\FTP01\\import\\073TEST3\\images (1).png",
+        "couleurAgendaEtablissement": "#00bfff",
+        "dicoEnLigneLeRobert": false,
+        "socketToken": "REDACTED",
+        "modules": [
+          {
+            "code": "CANTINE_BARCODE",
+            "enable": true,
+            "ordre": 1,
+            "badge": 0,
+            "params": {
+              "numeroBadge": "eleve||4191||240001"
+            }
+          },
+          {
+            "code": "VIE_SCOLAIRE",
+            "enable": true,
+            "ordre": 10,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "VIE_DE_LA_CLASSE",
+            "enable": true,
+            "ordre": 20,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "JOURNAL_DE_CLASSE",
+            "enable": true,
+            "ordre": 22,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "NOTES",
+            "enable": true,
+            "ordre": 30,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "CLOUD",
+            "enable": true,
+            "ordre": 90,
+            "badge": 0,
+            "params": {
+              "nbBadgePostits": "0",
+              "isActifPostitsEspacesTravail": "0",
+              "nbBadgeAgendaEvenements": "0",
+              "isActifAgendaEvenementsEspacesTravail": "0",
+              "padsActif": "0",
+              "visiosActif": "1",
+              "collaboraActif": "1",
+              "collaboraEdit": "1",
+              "collaboraFormat": "openXML",
+              "collaboraFormatChoixLibre": "0",
+              "streamingActif": "1"
+            }
+          },
+          {
+            "code": "MESSAGERIE",
+            "enable": true,
+            "ordre": 40,
+            "badge": 0,
+            "params": {
+              "isActif": "1",
+              "canParentsLireMessagesEnfants": "1",
+              "destAdmin": "1",
+              "destEleve": "0",
+              "destFamille": "0",
+              "destProf": "1",
+              "destEspTravail": "1",
+              "disabledNotification": "0",
+              "notificationEmailEtablissement": "1",
+              "choixMailNotification": "0",
+              "autreMailNotification": "",
+              "mailPro": "",
+              "mailPerso": "",
+              "messagerieApiVersion": "v3",
+              "blackListProfActive": "0",
+              "estEnBlackList": "0",
+              "afficherToutesLesClasses": "0"
+            }
+          },
+          {
+            "code": "EDT",
+            "enable": true,
+            "ordre": 50,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "DOCUMENTS_ELEVE",
+            "enable": true,
+            "ordre": 77,
+            "badge": 0,
+            "params": {
+              "DocumentsNotesActif": "1",
+              "DocumentsVSActif": "1",
+              "DocumentsAdministratifActif": "1",
+              "DocumentsEntrepriseActif": "1",
+              "AnneeArchive": "2019-2020,2020-2021,2021-2022,2022-2023,2023-2024"
+            }
+          },
+          {
+            "code": "CAHIER_DE_TEXTES",
+            "enable": true,
+            "ordre": 60,
+            "badge": 0,
+            "params": {
+              "compteRenduSeance": "1",
+              "compteRenduSeancePrevisionnel": "1",
+              "isCDTPrimaire": "1"
+            }
+          },
+          {
+            "code": "MANUELS_SCOLAIRES",
+            "enable": true,
+            "ordre": 62,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "QCM",
+            "enable": true,
+            "ordre": 65,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "EDFORMS",
+            "enable": true,
+            "ordre": 70,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "RESERVATIONS",
+            "enable": false,
+            "ordre": 80,
+            "badge": 0,
+            "params": {
+              "regime": "Demi-Pensionnaire",
+              "repasmidi_1": "1",
+              "repassoir_1": "0",
+              "repasmidi_2": "0",
+              "repassoir_2": "0",
+              "repasmidi_3": "0",
+              "repassoir_3": "0",
+              "repasmidi_4": "0",
+              "repassoir_4": "0",
+              "repasmidi_5": "1",
+              "repassoir_5": "0",
+              "repasmidi_6": "0",
+              "repassoir_6": "0",
+              "repasmidi_7": "0",
+              "repassoir_7": "0"
+            }
+          },
+          {
+            "code": "COMMANDE_PASSAGE",
+            "enable": true,
+            "ordre": 81,
+            "badge": 0,
+            "params": {
+              "affichageMenuSeul": "0"
+            }
+          },
+          {
+            "code": "CARNET_CORRESPONDANCE",
+            "enable": true,
+            "ordre": 70,
+            "badge": 2,
+            "params": {}
+          },
+          {
+            "code": "SUIVI_STAGE",
+            "enable": true,
+            "ordre": 75,
+            "badge": 0,
+            "params": {
+              "afficherCompteRenduVisite": "1",
+              "activerRecherche": "1"
+            }
+          },
+          {
+            "code": "LIVRET_APPRENTISSAGE",
+            "enable": false,
+            "ordre": 76,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "EMARGEMENT_CFA",
+            "enable": false,
+            "ordre": 77,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "SITUATION_FINANCIERE",
+            "enable": true,
+            "ordre": 92,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "RDVPP",
+            "enable": false,
+            "ordre": 90,
+            "badge": 0,
+            "params": {}
+          },
+          {
+            "code": "HUB",
+            "enable": true,
+            "ordre": 95,
+            "badge": 0,
+            "params": {}
+          }
+        ],
+        "parametresIndividuels": {
+          "lsuPoilDansLaMainBorne1": "",
+          "lsuPoilDansLaMainBorne2": "",
+          "lsuPoilDansLaMainBorne3": "",
+          "modeCalculLSU": "",
+          "isQrcode": true,
+          "accessibiliteVisuelle": false,
+          "zoomPage": false,
+          "checkAuthentificationSecure": false,
+          "typeSaisieNotesDefaut": "",
+          "nbJoursMaxRenduDevoirCDT": "",
+          "typeViewCDTDefaut": "",
+          "blocPMAccueil": false,
+          "blocActuAccueil": false
+        },
+        "profile": {
+          "sexe": "F",
+          "infoEDT": "",
+          "nomEtablissement": "Ensemble Scolaire APLIM",
+          "idEtablissement": "0",
+          "rneEtablissement": "0061060V",
+          "telPortable": "",
+          "idReelEtab": "5",
+          "photo": "//doc1.ecoledirecte.com/PhotoEleves/073TEST2_714d424d764c7533325151/56764c775351.jpg",
+          "estApprenant": false,
+          "classe": {
+            "id": 38,
+            "code": "CE2-CM1",
+            "libelle": "Cours Elémentaire 2e année & Cours Moyens 1ère année",
+            "estNote": 0
+          }
+        }
+      }
+    ]
+  }
+}
