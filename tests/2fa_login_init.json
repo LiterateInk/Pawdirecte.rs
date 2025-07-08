@@ -1,0 +1,10 @@
+{
+  "code": 250,
+  "token": "00000000-0000-0000-0000-000000000000",
+  "message": "Identifiant et/ou mot de passe invalide !",
+  "data":{
+    "changementMDP": false,
+    "nbJourMdpExire": 0,
+    "accounts": []
+  }
+}
