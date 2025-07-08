@@ -4,7 +4,6 @@ pub struct Authentication {
   pub password: String,
   pub device_uuid: String,
   pub access_token: Option<String>,
-  pub refresh_token: Option<String>,
 }
 
 impl Authentication {
@@ -21,7 +20,6 @@ impl Authentication {
       password,
       device_uuid,
       access_token: None,
-      refresh_token: None,
     }
   }
 }
