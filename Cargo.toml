@@ -10,7 +10,9 @@ license = "GPL-3.0-or-later"
 edition = "2024"
 
 [dependencies]
+automod = "1.0.15"
 const_format = "0.2.34"
+cookie_parser = "1.0.1"
 reqwest = "0.12.22"
 serde = { version = "1.0.219", features = ["derive"] }
 serde_json = "1.0.140"
