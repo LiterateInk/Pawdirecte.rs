@@ -926,11 +926,14 @@ dependencies = [
  "automod",
  "const_format",
  "cookie_parser",
+ "http",
  "reqwest",
  "serde",
  "serde_json",
+ "serde_urlencoded",
  "thiserror",
  "tokio",
+ "url",
  "uuid",
 ]
 

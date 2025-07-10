@@ -13,10 +13,13 @@ edition = "2024"
 automod = "1.0.15"
 const_format = "0.2.34"
 cookie_parser = "1.0.1"
-reqwest = "0.12.22"
+http = "1.3.1"
+reqwest = { version = "0.12.22", features = ["json"] }
 serde = { version = "1.0.219", features = ["derive"] }
 serde_json = "1.0.140"
+serde_urlencoded = "0.7.1"
 thiserror = "2.0.12"
+url = "2.5.4"
 uuid = { version = "1.17.0", features = ["v4"] }
 
 [dev-dependencies]
