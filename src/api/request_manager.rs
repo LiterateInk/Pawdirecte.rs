@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 use reqwest::{
-  Client, Request, Response,
+  Client, Request,
   header::{self, HeaderMap},
 };
 use url::Url;
