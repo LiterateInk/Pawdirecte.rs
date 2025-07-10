@@ -7,7 +7,13 @@ pub enum Error {
   #[error(transparent)]
   Network(#[from] reqwest::Error),
   #[error(transparent)]
+  HeaderValue(#[from] reqwest::header::InvalidHeaderValue),
+  #[error(transparent)]
   Cookie(#[from] cookie_parser::CookieParseError),
   #[error(transparent)]
-  Json(#[from] serde_json::Error),
+  JsonEncode(#[from] serde_json::Error),
+  #[error(transparent)]
+  Url(#[from] url::ParseError),
+  #[error(transparent)]
+  FormEncode(#[from] serde_urlencoded::ser::Error),
 }
