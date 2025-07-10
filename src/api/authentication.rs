@@ -1,5 +1,6 @@
 #[derive(Debug, Clone)]
 pub struct Authentication {
+  pub token: Option<String>,
   pub username: String,
   pub password: String,
   pub device_uuid: String,
@@ -16,6 +17,7 @@ impl Authentication {
       device_uuid.unwrap_or_else(|| uuid::Uuid::new_v4().into());
 
     Self {
+      token: None,
       username,
       password,
       device_uuid,
