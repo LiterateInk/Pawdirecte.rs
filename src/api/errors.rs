@@ -2,6 +2,10 @@
 pub enum Error {
   #[error("unauthenticated session")]
   WrongLoginState(),
+  #[error("identifiers or tokens are incorrect")]
+  BadCredentials(),
+  #[error("a newer version of ecoledirecte is available")]
+  InvalidVersion(),
   #[error("GTK cookie not found, is EcoleDirecte up?")]
   CookieGtkNotFound(),
   #[error(transparent)]

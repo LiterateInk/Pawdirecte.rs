@@ -9,16 +9,6 @@ use cookie_parser::{CookiePair, parse_set_cookie};
 use http::Method;
 use reqwest::header::{self, SET_COOKIE};
 
-/// Will handle most of the authentication.
-///
-/// 1. create an instance using `from_credentials(username, password)`
-/// 2. do `initialize()` to attempt to authenticate
-/// 3. check `requires_2fa` value
-/// 4. if `true`, you have to call `get_2fa_challenge()` to retrieve the
-///    challenge you have to solve to authenticate. once done, you have
-///    to call `solve_2fa_challenge(answer)`
-/// 5. do `finalize()` to retrieve logged in accounts that you can use
-///    for further requests
 #[derive(Debug)]
 pub struct LoginManager {
   pub requires_2fa: bool,
@@ -44,12 +34,8 @@ impl LoginManager {
     }
   }
 
-  /// Initializes a session using the given credentials.
-  /// `initialize` only performs the first step which is
-  /// authenticating but does NOT return accounts nor 2FA challenge.
-  ///
-  /// See `finalize` for retrieving accounts.
-  pub async fn initialize(&mut self) -> Result<(), Error> {
+  /// Make a login request, this will define accounts and 2FA variable.
+  pub async fn request(&mut self) -> Result<(), Error> {
     // 1. craft a request to grab GTK cookies for login.
     let request =
       RequestBuilder::<()>::new(Method::GET, "/v3/login.awp?gtk=1")?
@@ -135,23 +121,40 @@ impl LoginManager {
       // 10. we're sure that JSON is given to user.
       let json = json.unwrap();
 
-      // 11. check if 2fa is required.
-      self.requires_2fa = json.code == 250;
+      match json.code {
+        505 => Err(Error::BadCredentials()),
+        517 => Err(Error::InvalidVersion()),
+        _ => {
+          // 11. check if 2fa is required.
+          self.requires_2fa = json.code == 250;
 
-      // 12. assign the login response, for later usage.
-      self.login_response = Some(json.data);
+          // 12. assign the login response, for later usage.
+          self.login_response = Some(json.data);
 
-      Ok(())
+          Ok(())
+        }
+      }
     } else {
       Err(Error::CookieGtkNotFound())
     }
   }
 
   pub async fn get_2fa_challenge(&self) -> Result<(), Error> {
+    let request =
+      RequestBuilder::new(Method::POST, "/connexion/doubleauth.awp?verbe=get")?
+        .append_version()
+        .set_token(self.authentication.token.unwrap())?
+        .set_form({});
+
     Ok(())
   }
 
-  pub fn finalize(&self) -> Result<Vec<Account>, Error> {
+  pub async fn solve_2fa_challenge(&self, answer: String) -> Result<(), Error> {
+    _ = answer;
+    Ok(())
+  }
+
+  pub fn accounts(&self) -> Result<Vec<Account>, Error> {
     if let Some(login_response) = &self.login_response {
       Ok(login_response.accounts.clone())
     } else {
