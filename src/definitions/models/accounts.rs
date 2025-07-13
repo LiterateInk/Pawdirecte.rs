@@ -38,6 +38,8 @@ pub struct Account {
   pub le_robert_online_dictionary: bool,
   #[serde(rename = "socketToken")]
   pub socket_token: String,
+  #[serde(rename = "accessToken")]
+  pub access_token: Option<String>,
   #[serde(skip)]
   pub modules: Vec<String>,
   #[serde(skip, rename = "parametresIndividuels")]
