@@ -1,20 +1,29 @@
 use crate::{
   api::{Authentication, Error, RequestBuilder, RequestManager},
   definitions::{
-    models::Account, requests::LoginRequest, responses::LoginResponse,
+    models::Account,
+    requests::{DoubleAuthSolveRequest, EmptyRequest, LoginRequest},
+    responses::{
+      DoubleAuthChallengeResponse, DoubleAuthSolveResponse, LoginResponse,
+    },
   },
 };
 
 use cookie_parser::{CookiePair, parse_set_cookie};
 use http::Method;
 use reqwest::header::{self, SET_COOKIE};
+use std::{
+  sync::{Arc, Mutex},
+  vec,
+};
 
 #[derive(Debug)]
 pub struct LoginManager {
   pub requires_2fa: bool,
   login_response: Option<LoginResponse>,
   request_manager: RequestManager,
-  pub authentication: Authentication,
+  pub authentication: Arc<Mutex<Authentication>>,
+  double_auth: Option<DoubleAuthSolveResponse>,
 }
 
 impl LoginManager {
@@ -23,14 +32,16 @@ impl LoginManager {
     password: String,
     device_uuid: Option<String>,
   ) -> Self {
-    let authentication =
-      Authentication::from_credentials(username, password, device_uuid);
+    let authentication = Arc::new(Mutex::new(
+      Authentication::from_credentials(username, password, device_uuid),
+    ));
 
     Self {
       requires_2fa: false,
       login_response: None,
       request_manager: RequestManager::new(authentication.clone()),
       authentication,
+      double_auth: None,
     }
   }
 
@@ -74,8 +85,13 @@ impl LoginManager {
       // 7. build the form data to authenticate.
       // ---------------------------------------
       // 7.1.1. we're not already authenticated, let's run the initial procedure.
-      let form = if self.authentication.access_token.is_none() {
-        let auth = self.authentication.clone();
+      let auth = self.authentication.lock().unwrap().clone();
+      let form = if auth.access_token.is_none() {
+        let double_auth = if self.double_auth.is_none() {
+          None
+        } else {
+          Some(vec![self.double_auth.clone().unwrap()])
+        };
 
         LoginRequest {
           device_uuid: auth.device_uuid,
@@ -85,12 +101,11 @@ impl LoginManager {
           username: auth.username,
           access_token: None,
           account_type: None,
-          double_auth: None,
+          double_auth,
         }
       }
       // 7.2.1. we're already authenticated, re-use the access token.
       else {
-        let auth = self.authentication.clone();
         LoginRequest {
           device_uuid: auth.device_uuid,
           is_reauth: true,
@@ -139,18 +154,51 @@ impl LoginManager {
     }
   }
 
-  pub async fn get_2fa_challenge(&self) -> Result<(), Error> {
-    let request =
-      RequestBuilder::new(Method::POST, "/connexion/doubleauth.awp?verbe=get")?
-        .append_version()
-        .set_token(self.authentication.token.unwrap())?
-        .set_form({});
+  pub async fn get_2fa_challenge(
+    &mut self,
+  ) -> Result<DoubleAuthChallengeResponse, Error> {
+    let auth = self.authentication.lock().unwrap().clone();
 
-    Ok(())
+    let request = RequestBuilder::new(
+      Method::POST,
+      "/v3/connexion/doubleauth.awp?verbe=get",
+    )?
+    .append_version()
+    .set_token(auth.token.unwrap())?
+    .set_form(EmptyRequest {})
+    .build()?;
+
+    let (json, _) = self
+      .request_manager
+      .send::<DoubleAuthChallengeResponse>(request)
+      .await?;
+
+    Ok(json.unwrap().data)
   }
 
-  pub async fn solve_2fa_challenge(&self, answer: String) -> Result<(), Error> {
-    _ = answer;
+  pub async fn solve_2fa_challenge(
+    &mut self,
+    answer: String,
+  ) -> Result<(), Error> {
+    let auth = self.authentication.lock().unwrap().clone();
+
+    let request = RequestBuilder::new(
+      Method::POST,
+      "/v3/connexion/doubleauth.awp?verbe=post",
+    )?
+    .append_version()
+    .set_token(auth.token.unwrap())?
+    .set_form(DoubleAuthSolveRequest { answer })
+    .build()?;
+
+    let (json, _) = self
+      .request_manager
+      .send::<DoubleAuthSolveResponse>(request)
+      .await?;
+
+    let json = json.unwrap().data;
+    self.double_auth = Some(json);
+
     Ok(())
   }
 

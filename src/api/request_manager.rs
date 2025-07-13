@@ -1,4 +1,6 @@
 use std::collections::HashMap;
+use std::fmt::Debug;
+use std::sync::{Arc, Mutex};
 
 use reqwest::{
   Client, Request,
@@ -13,15 +15,15 @@ use crate::{
 
 #[derive(Debug, Clone)]
 pub struct RequestManager {
-  authentication: Authentication,
+  authentication: Arc<Mutex<Authentication>>,
 }
 
 impl RequestManager {
-  pub fn new(authentication: Authentication) -> Self {
+  pub fn new(authentication: Arc<Mutex<Authentication>>) -> Self {
     Self { authentication }
   }
 
-  pub async fn send<T: serde::de::DeserializeOwned>(
+  pub async fn send<T: serde::de::DeserializeOwned + Debug>(
     &mut self,
     request: Request,
   ) -> Result<(Option<APIResponseWrap<T>>, HeaderMap), Error> {
@@ -32,8 +34,10 @@ impl RequestManager {
     let json = response.json::<APIResponseWrap<T>>().await;
 
     if let Ok(json) = json {
-      // We have to update the current token for this session.
-      self.authentication.token = Some(json.token.clone());
+      if let Some(token) = json.token.as_ref() {
+        let mut auth = self.authentication.lock().unwrap();
+        auth.token = Some(token.clone());
+      }
 
       Ok((Some(json), headers))
     } else {
