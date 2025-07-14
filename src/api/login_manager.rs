@@ -139,6 +139,7 @@ impl LoginManager {
       match json.code {
         505 => Err(Error::BadCredentials()),
         517 => Err(Error::InvalidVersion()),
+        535 => Err(Error::EstablishmentUnavailable()),
         _ => {
           // 11. check if 2fa is required.
           self.requires_2fa = json.code == 250;

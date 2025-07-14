@@ -4,8 +4,10 @@ pub enum Error {
   WrongLoginState(),
   #[error("identifiers or tokens are incorrect")]
   BadCredentials(),
-  #[error("a newer version of ecoledirecte is available")]
+  #[error("a newer version of EcoleDirecte is available")]
   InvalidVersion(),
+  #[error("establishment is closed, wait until it reopens")]
+  EstablishmentUnavailable(),
   #[error("GTK cookie not found, is EcoleDirecte up?")]
   CookieGtkNotFound(),
   #[error(transparent)]
