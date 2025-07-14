@@ -39,7 +39,7 @@ pub struct Account {
   #[serde(rename = "socketToken")]
   pub socket_token: String,
   #[serde(rename = "accessToken")]
-  pub access_token: Option<String>,
+  pub access_token: String,
   #[serde(skip)]
   pub modules: Vec<String>,
   #[serde(skip, rename = "parametresIndividuels")]

@@ -26,6 +26,7 @@
         "couleurAgendaEtablissement": "#00bfff",
         "dicoEnLigneLeRobert": false,
         "socketToken": "REDACTED",
+        "accessToken": "REDACTED",
         "modules": [
           {
             "code": "CANTINE_BARCODE",

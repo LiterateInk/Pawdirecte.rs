@@ -23,7 +23,7 @@ async fn main() -> anyhow::Result<()> {
   // A new access token has been generated while doing this operation,
   // make sure to save this!
   let account = accounts.first().unwrap();
-  println!("ACCESS_TOKEN={}", account.access_token.as_ref().unwrap());
+  println!("ACCESS_TOKEN={}", account.access_token);
 
   Ok(())
 }

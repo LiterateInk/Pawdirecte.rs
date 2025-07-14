@@ -41,7 +41,7 @@ async fn main() -> anyhow::Result<()> {
   let auth = login.authentication.lock().unwrap();
   println!("USERNAME={}", account.username);
   println!("KIND={}", account.kind);
-  println!("ACCESS_TOKEN={}", account.access_token.as_ref().unwrap());
+  println!("ACCESS_TOKEN={}", account.access_token);
   println!("DEVICE_UUID={}", auth.device_uuid);
 
   Ok(())
