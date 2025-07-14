@@ -14,9 +14,7 @@ cargo add pawdirecte
 
 ## Quick Start
 
-```rust
-// TODO
-```
+Please take a look at the [`login_with_double_auth` example](./examples/login_with_double_auth.rs) to know how to authenticate.
 
 You can find guides at [**&nearr;&nbsp;pawdirecte.docs.literate.ink**](https://pawdirecte.docs.literate.ink) and if it's not enough you can also take a look at the [**&nearr;&nbsp;examples** directory on the GitHub repository](https://github.com/LiterateInk/Pawdirecte.rs/tree/main/examples) for inspiration.
 
