@@ -45,6 +45,29 @@ impl LoginManager {
     }
   }
 
+  pub fn from_access_token(
+    username: String,
+    access_token: String,
+    kind: String,
+    device_uuid: String,
+  ) -> Self {
+    let authentication =
+      Arc::new(Mutex::new(Authentication::from_access_token(
+        username,
+        access_token,
+        kind,
+        device_uuid,
+      )));
+
+    Self {
+      requires_2fa: false,
+      login_response: None,
+      request_manager: RequestManager::new(authentication.clone()),
+      authentication,
+      double_auth: None,
+    }
+  }
+
   /// Make a login request, this will define accounts and 2FA variable.
   pub async fn request(&mut self) -> Result<(), Error> {
     // 1. craft a request to grab GTK cookies for login.
@@ -109,12 +132,12 @@ impl LoginManager {
         LoginRequest {
           device_uuid: auth.device_uuid,
           is_reauth: true,
-          password: "???".into(),
+          password: auth.password.trim().into(),
           remember_me: None,
           access_token: auth.access_token,
           double_auth: None,
           username: auth.username,
-          account_type: None, // TODO
+          account_type: auth.kind,
         }
       };
 

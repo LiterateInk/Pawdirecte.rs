@@ -26,7 +26,7 @@ pub struct LoginRequest {
   pub double_auth: Option<Vec<DoubleAuthSolveResponse>>,
 
   #[serde(rename = "typeCompte")]
-  pub account_type: Option<u16>,
+  pub account_type: Option<String>,
 
   #[serde(rename = "accesstoken")]
   pub access_token: Option<String>,

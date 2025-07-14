@@ -30,11 +30,19 @@ async fn main() -> anyhow::Result<()> {
     login.request().await?;
   }
 
-  // You can now use the accounts!
+  // You can now use the accounts,
+  // please see the other examples to see what you can do.
   let accounts = login.accounts()?;
 
-  // We're logging them, please see the other examples to see what you can do.
-  println!("{accounts:#?}");
+  // --------------------------------------------------------------------------
+  // If you're interested in re-authenticating without re-using the password,
+  // here's some information that will be useful for the `relogin.rs` example!
+  let account = accounts.first().unwrap();
+  let auth = login.authentication.lock().unwrap();
+  println!("USERNAME={}", account.username);
+  println!("KIND={}", account.kind);
+  println!("ACCESS_TOKEN={}", account.access_token.as_ref().unwrap());
+  println!("DEVICE_UUID={}", auth.device_uuid);
 
   Ok(())
 }
