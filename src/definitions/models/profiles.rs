@@ -33,7 +33,7 @@ pub struct StudentProfile {
   #[serde(rename = "estApprenant")]
   pub is_apprentice: bool,
   #[serde(rename = "classe")]
-  pub class: Class,
+  pub class: Option<Class>,
 }
 
 #[derive(Debug, Clone, Deserialize)]
